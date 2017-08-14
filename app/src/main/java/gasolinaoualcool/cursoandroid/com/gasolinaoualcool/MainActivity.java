@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -36,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
                 Double resultado = precoAlcoolDigitado/precoGasDigitado;
 
                 if(resultado >= 0.7){
-                    textoResultado.setText("Melhor usar Gasolina!");
+                    Toast.makeText(MainActivity.this, "Melhor usar Gasolina!", Toast.LENGTH_LONG).show();
                 }else{
-                    textoResultado.setText("Melhor usar Álcool!");
+                    Toast.makeText(MainActivity.this, "Melhor usar Álcool!", Toast.LENGTH_LONG).show();
                 }
 
             }
